@@ -1,5 +1,7 @@
+$color_grey: #414143
 $color_green: #489e3b
 $color_yellow: #fabd42
+$color_lightyellow: #fdf050
 $color_white: #f3f7f7
 $color_red: #cd0a20
 
@@ -10,10 +12,12 @@ $max_content_width: 768px
 @mixin size($w,$h)
   width: $w
   height: $h
-  
+
 *
   // border: solid 1px
   position: relative
+  font-family: 'Cabin', sans-serif , 微軟正黑體
+  letter-spacing: 1px
 
 html,body
   padding: 0px
@@ -30,41 +34,40 @@ html,body
     left: 50%
     transform: translateX(-50%) translateY(-50%)
 
-  
+
 .content
   padding: 50px
-  font-family: 'Cabin', sans-serif , 微軟正黑體
-  
+
   & .maxwidth
     max-width: $max_content_width
     margin-left: auto
     margin-right: auto
-  
+
   & h5
     margin-top: 10px
-  
+
   & h1
     font-size: $font_base_size*4
   & h1.small_english
-    font-size: $font_base_size*2.4   
+    font-size: $font_base_size*2.4
   & h2
     font-size: $font_base_size*3
   & h2.small_english
-    font-size: $font_base_size*1.6  
+    font-size: $font_base_size*1.6
   & h3
     font-size: $font_base_size*2
   & h3.small_english
-    font-size: $font_base_size*1.2    
+    font-size: $font_base_size*1.2
   & .titlehr
     width: 100px
     border-bottom: solid 5px
- 
+
   & .small_english
     margin-top: -20px
-  
+
   & .button
     display: inline-block
-    border: solid 1px 
+    border: solid 1px
     border-radius: 50px
     padding: 5px 25px
     margin-right: 10px
@@ -73,6 +76,7 @@ html,body
     font-weight: 500
     background-color: $color_white
     color: $color_green
+    box-shadow: 1px 3px 8px -3px #6a737b
 
   & .button_yellow
     background-color: $color_yellow
@@ -80,7 +84,7 @@ html,body
     font-weight: 400
   & .button_green
     background-color: $color_green
-    color: $color_white
+    color: $color_lightyellow
     font-weight: 400
   & .button_red
     background-color: $color_red
@@ -101,49 +105,49 @@ html,body
   & .color_block
     border: solid 2px
     border-radius: 100px
-    +size(30px,30px)     
+    +size(30px,30px)
   & .color_block_green
-    background-color: $color_green  
+    background-color: $color_green
   & .color_block_yellow
-    background-color: $color_yellow  
+    background-color: $color_yellow
   & .color_block_white
-    background-color: $color_white   
+    background-color: $color_white
   & .color_block_red
-    background-color: $color_red     
-    
+    background-color: $color_red
+
 .content_green
-  background-color: $color_green 
-  color: $color_white 
-  
+  background-color: $color_green
+  color: $color_white
+
   & .small_english
-    color: $color_yellow
-  
+    color: $color_lightyellow
+
   & .titlehr
-    border-color: $color_yellow  
-      
+    border-color: $color_lightyellow
+
   & h1,& h2,& h3
-    font-weight: 400    
-    
-   
+    font-weight: 400
+
+
 .content_yellow
   background-color: $color_yellow
-  color: $color_white 
-  
+  color: $color_grey
+
   & .small_english
     color: $color_green
-  
+
   & .titlehr
-    border-color: $color_green 
-      
+    border-color: $color_green
+
   & h1,& h2,& h3
-    font-weight: 400    
-    
+    font-weight: 400
+
 .content_white
   background-color: $color_white
   color: $color_green
-  
+
   & .small_english
     color: $color_yellow
-  
+
   & .titlehr
-    border-color: $color_yellow    
+    border-color: $color_yellow
