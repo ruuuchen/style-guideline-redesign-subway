@@ -1,3 +1,4 @@
+// 顏色設定
 $color_grey: #414143
 $color_green: #489e3b
 $color_yellow: #fabd42
@@ -16,105 +17,112 @@ $max_content_width: 768px
 *
   // border: solid 1px
   position: relative
-  font-family: 'Cabin', sans-serif , 微軟正黑體
+  font-family: "Cabin", sans-serif , 微軟正黑體, "LiHei Pro"
   letter-spacing: 1px
 
 html,body
   padding: 0px
   margin: 0px
 
+// 封面區塊
 .header
   height: 300px
   background-color: $color_white
 
-  & .logo
-    width: 250px
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translateX(-50%) translateY(-50%)
+.logo
+  width: 350px
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translateX(-50%) translateY(-50%)
 
-
+// 內容區塊
 .content
   padding: 50px
 
-  & .maxwidth
-    max-width: $max_content_width
-    margin-left: auto
-    margin-right: auto
+.maxwidth
+  max-width: $max_content_width
+  margin-left: auto
+  margin-right: auto
 
-  & h5
-    margin-top: 10px
+// 標題字設定
+h1, h2, h3
+  font-weight: 400
 
-  & h1
-    font-size: $font_base_size*4
-  & h1.small_english
-    font-size: $font_base_size*2.4
-  & h2
-    font-size: $font_base_size*3
-  & h2.small_english
-    font-size: $font_base_size*1.6
-  & h3
-    font-size: $font_base_size*2
-  & h3.small_english
-    font-size: $font_base_size*1.2
-  & .titlehr
-    width: 100px
-    border-bottom: solid 5px
+h1
+  font-size: $font_base_size*4
+h1.small_english
+  font-size: $font_base_size*2.4
+h2
+  font-size: $font_base_size*3
+h2.small_english
+  font-size: $font_base_size*1.6
+h3
+  font-size: $font_base_size*2
+h3.small_english
+  font-size: $font_base_size*1.2
+.titlehr
+  width: 100px
+  border-bottom: solid 5px
 
-  & .small_english
-    margin-top: -20px
+h5
+  margin-top: 40px
+.small_english
+  margin-top: -20px
 
-  & .button
-    display: inline-block
-    border: solid 1px
-    border-radius: 50px
-    padding: 5px 25px
-    margin-right: 10px
-    letter-spacing: 2px
-    font-size: $font_base_size*1.5
-    font-weight: 500
-    background-color: $color_white
-    color: $color_green
-    box-shadow: 1px 3px 8px -3px #6a737b
+// 按鈕設定
+.button
+  display: inline-block
+  border: solid 1px
+  border-radius: 50px
+  padding: 5px 25px
+  margin-right: 10px
+  letter-spacing: 2px
+  font-size: $font_base_size*1.5
+  font-weight: ˋ00
+  background-color: $color_white
+  color: $color_green
+  box-shadow: 1px 5px 20px -10px #6a737b
 
-  & .button_yellow
-    background-color: $color_yellow
-    color: $color_white
-    font-weight: 400
-  & .button_green
-    background-color: $color_green
-    color: $color_lightyellow
-    font-weight: 400
-  & .button_red
-    background-color: $color_red
-    color: $color_white
-    font-weight: 400
+.button_yellow
+  background-color: $color_yellow
+  color: $color_white
 
-  & .color_chips
-    display: inline-block
-    margin-right: 30px
+.button_green
+  background-color: $color_green
+  color: $color_white
 
-  & .color_tag, & .color_block
-    display: inline-block
-    vertical-align: middle
+.button_red
+  background-color: $color_red
+  color: $color_white
 
-  & .color_tag
-    padding-right: 5px
+// 色票設定
+.color_chips
+  display: inline-block
+  margin-right: 30px
 
-  & .color_block
-    border: solid 2px
-    border-radius: 100px
-    +size(30px,30px)
-  & .color_block_green
-    background-color: $color_green
-  & .color_block_yellow
-    background-color: $color_yellow
-  & .color_block_white
-    background-color: $color_white
-  & .color_block_red
-    background-color: $color_red
+.color_tag, .color_block
+  display: inline-block
+  vertical-align: middle
 
+.color_tag
+  padding-right: 5px
+
+.color_block
+  border: solid 1px
+  +size(20px,20px)
+.color_block_green
+  background-color: $color_green
+.color_block_yellow
+  background-color: $color_yellow
+.color_block_lightyellow
+  background-color: #fdf050
+.color_block_white
+  background-color: $color_white
+.color_block_red
+  background-color: $color_red
+
+// 綠色內容區塊
 .content_green
   background-color: $color_green
   color: $color_white
@@ -125,10 +133,7 @@ html,body
   & .titlehr
     border-color: $color_lightyellow
 
-  & h1,& h2,& h3
-    font-weight: 400
-
-
+// 黃色內容區塊
 .content_yellow
   background-color: $color_yellow
   color: $color_grey
@@ -139,9 +144,10 @@ html,body
   & .titlehr
     border-color: $color_green
 
-  & h1,& h2,& h3
-    font-weight: 400
+  & hr
+    border-color: $color_grey
 
+// 白色內容區塊
 .content_white
   background-color: $color_white
   color: $color_green
@@ -151,3 +157,6 @@ html,body
 
   & .titlehr
     border-color: $color_yellow
+
+  & hr
+    border-color: $color_green
